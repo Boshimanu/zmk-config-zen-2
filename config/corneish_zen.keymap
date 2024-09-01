@@ -308,7 +308,7 @@
 
     keymap {
         compatible = "zmk,keymap";
-        display-name = "QWERTY";
+        display-name = "Colemak";
        //Layer 0 - Default
                 default_layer {
         // -------------------------------------------------------------------------------------------------
