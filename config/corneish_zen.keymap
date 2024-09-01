@@ -308,17 +308,10 @@
 
     keymap {
         compatible = "zmk,keymap";
-        display-name = "Colemak";
-       //Layer 0 - Default
-                default_layer {
-        // -------------------------------------------------------------------------------------------------
-        // |  TAB      |  Q  |  W  |  E  |  R  |  T  |                      |  Y  |  U   |  I  |  O  |  P  |   \  |
-        // | Bakcspace |  A  |  S  |  D  |  F  |  G  |                      |  H  |  J   |  K  |  L  |  ;  |   '  |
-        // | SHFT      |  Z  |  X  |  C  |  V  |  B  |  None|     |  MUTE   |  N  |  M   |  ,  |  .  |  /  | SHFT |
-        //    4-WinMan+emoji  | 1-Numbers/Space | CMD/Enter |  | CMD/Enter | 2-Arrows  | 3-Italian Accents |
-        //                                              Vol+    Vol-
-        //LA(BACKSPACE) BACKSPACE AS(A)
-                bindings = <
+//-----------------------Layer 0 - Default
+        default_layer {
+            display-name = "COLEMAK";
+            bindings = <
         AS(TAB)    AS(Q) AS(W) AS(F) AS(P) AS(G)                             AS(J) AS(L)  AS(U)     AS(Y)   AS(SEMI)  AS(BSLH)
         BCK        AS(A) AS(R) AS(S) AS(T) AS(D)                             AS(H) AS(N)  AS(E)     AS(I)   AS(O)     AS(SQT)
         &kp LSHFT  AS(Z) AS(X) AS(C) AS(V) AS(B)                             AS(K) AS(M)  AS(COMMA) AS(DOT) AS(SLASH) &kp RSHFT
@@ -326,49 +319,62 @@
                         >;
                 };
 
-        lower_layer {
+//Layer 1 Numbers____________________________________________________________________________________________________________________________________
+        numbers_layer {
             display-name = "NUMBER";
-
-            // -------------------------------------------------------------------------------
-            // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-            // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-            // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
-            //                    | GUI |     | SPC |   | ENT |     | ALT |
-
             bindings = <
-&trans  &kp N1           &kp N2          &kp N3             &kp N4            &kp N5             &kp N6           &kp N7           &kp N8           &kp N9           &kp N0    &kp BSPC
-&trans  &bt BT_CLR_ALL   &bt BT_SEL 0    &bt BT_SEL 1       &bt BT_SEL 2      &bt BT_SEL 3       &kp LEFT         &kp DOWN         &kp UP           &kp RIGHT        &kp HOME  &kp PG_UP
-&trans  &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &ext_power EP_OFF  &ext_power EP_ON  &rgb_ug RGB_EFF    &rgb_ug RGB_EFR  &rgb_ug RGB_SPI  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &kp END   &kp PG_DN
-                                         &trans             &trans            &trans             &kp INS          &kp DEL          &trans
+        &trans       AS(LBKT)    AS(RBKT)    &kp LPAR       &kp RPAR       &mk_capt                        &trans     &trans     &trans   &trans   &trans     &kp CAPS
+        &trans       AS(N1)      AS(N2)      AS(N3)         AS(N4)         AS(N5)                          AS(N6)     AS(N7)     AS(N8)   AS(N9)   AS(N0)     AS(EQUAL)
+        &trans       &trans      &kp LBKT    &kp LC(LEFT)   &kp LC(RIGHT)  &kp LA(LS(O))                   &kp PLUS   AS(MINUS)  &trans   &trans   &trans     AS(GRAVE)  
+                                                &trans  &trans &trans                                                    &trans  &trans  &trans
+                        >;
+        };
+//Layer 2  Arrows Mouse __________________________________________________________________________________________________________________________________________ 
+        arrows_layer {
+            display-name = "ARROWS";
+            bindings = <
+        &trans &kp EXCL &kp AT &kp HASH &kp DLLR  &trans                       &kp DEL      &kp LA(LEFT)  &kp UP   &kp LA(RIGHT)  &kp PG_UP  &kp LG(LS(RBKT))
+        &trans &trans   &trans &trans   &trans    &trans                       &kp LG(UP)   &kp LEFT      &kp DOWN &kp RIGHT      &kp PG_DN  &kp LG(LA(SQT))  
+        &trans &trans   &trans &trans   &trans    &trans                       &kp LG(DOWN) &kp LG(LEFT)  &kp LBRC &kp LG(RIGHT)  &kp HOME   &kp LA(LC(SPACE))
+                                &kp LGUI  &trans   &kp SPACE                &kp RET   &trans    &kp LALT
+                        >;
+                };
+
+//Layer 3   Bluetooth __________________________________________________________________________________________________________________________________________ 
+        system_layer {
+            display-name = "SYSTEM";
+            bindings = <
+&kp F1        &kp F2           &kp F3           &kp F4              &kp F5              &kp F6                     &kp F7           &kp F8           &kp F9           &kp F10          &kp F11       &kp F12
+&bt BT_CLR    &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2        &bt BT_SEL 3        &bt BT_SEL 4               &kp LEFT         &kp DOWN         &kp UP           &kp RIGHT        &out OUT_USB  &out OUT_BLE
+&bootloader   &rgb_ug RGB_OFF  &rgb_ug RGB_ON   &ext_power EP_OFF   &ext_power EP_ON    &rgb_ug RGB_EFF            &rgb_ug RGB_EFR  &rgb_ug RGB_SPI  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &kp END       &bootloader 
+                                    &trans   &trans   &trans                                                                                   &trans   &trans   &trans
             >;
         };
 
-        raise_layer {
-            display-name = "SYMBOL";
+//Layer 4 Italian Accents_______________________________________________________________________________________________________________________________________
+                it_layer {
+                        bindings = <
+&trans          &trans         &trans          &trans          &trans           &trans                    &trans          &trans         &it_u           &trans           &trans            &trans
+&trans          &it_a          &trans          &trans          &trans           &trans                    &trans          &trans         IT_E            &trans           &it_i             &it_o              &none
+&ht LG(N1) F1   &ht LG(N2) F2  &ht LG(N3) F3   &ht LG(N4) F4   &ht LG(N5) F5    &ht LG(N6) F6             &ht LG(N7) F7   &ht LG(N8) F8  &ht LG(N9) F9   &ht LG(N0) F10   &ht LG(Z) F11    &ht LG(LS(Z)) F12
+                                        &trans   &trans   &trans                                                                                 &trans   &trans   &trans
+                                >;
+                };
 
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
-            // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-            // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-            //                    | GUI |     | SPC |   | ENT |     | ALT |
 
-            bindings = <
-&trans  &kp EXCL      &kp AT        &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
-&trans  &none         &none         &none     &none     &none        &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
-&trans  &out OUT_USB  &out OUT_BLE  &none     &none     &none        &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
-                                    &trans    &trans    &kp SPACE    &kp RET    &trans     &trans
-            >;
+//Layer 5 Emoji and Window Manip_________________________________________________________________________________________________________________________________
+                emoji_layer {
+                        bindings = <
+&trans   &trans    &elove   &efp     &ehmmm      &ecoffe                          &trans   &trans     &trans     &trans    &trans    &trans
+&trans   &elaugh   &esmile  &eok     &ethank     &esad                            &trans   &trans     &trans     &trans    &trans    &trans
+&trans   &trans    &trans   &trans   &trans      &trans                           &trans   &trans     &trans     &trans    &trans    &trans
+                    &trans   &trans   &trans                                                   &trans   &trans   &trans
+                                >;
+                };
         };
+};
 
-        layer_3 {
-            display-name = "Fn";
-            bindings = <
-&trans  &kp F1  &kp F2  &kp F3  &kp F4      &kp F5         &kp F6       &kp F7  &kp F8  &kp F9  &kp F10          &kp F11
-&trans  &trans  &trans  &trans  &sys_reset  &bootloader    &bootloader  &trans  &trans  &trans  &kp PRINTSCREEN  &kp F12
-&trans  &trans  &trans  &trans  &trans      &trans         &trans       &trans  &trans  &trans  &kp SCROLLLOCK   &kp PAUSE_BREAK
-                        &trans  &trans      &trans         &trans       &trans  &trans
-            >;
-        };
+
     };
 };
 
