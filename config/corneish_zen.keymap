@@ -311,7 +311,7 @@
         compatible = "zmk,keymap";
 //-----------------------Layer 0 - Default
         default_layer {
-            display-name = "COLEMAK";
+            display-name = "Colemak";
             bindings = <
 AS(TAB)    AS(Q) AS(W) AS(F) AS(P) AS(G)                             AS(J) AS(L)  AS(U)     AS(Y)   AS(SEMI)  AS(BSLH)
 BCK        AS(A) AS(R) AS(S) AS(T) AS(D)                             AS(H) AS(N)  AS(E)     AS(I)   AS(O)     AS(SQT)
@@ -327,7 +327,7 @@ BCK        AS(A) AS(R) AS(S) AS(T) AS(D)                             AS(H) AS(N)
 &trans       AS(LBKT)    AS(RBKT)    &kp LPAR       &kp RPAR       &mk_capt                        &trans     &trans     &trans   &trans   &trans     &kp CAPS
 &trans       AS(N1)      AS(N2)      AS(N3)         AS(N4)         AS(N5)                          AS(N6)     AS(N7)     AS(N8)   AS(N9)   AS(N0)     AS(EQUAL)
 &trans       &trans      &kp LBKT    &kp LC(LEFT)   &kp LC(RIGHT)  &kp LA(LS(O))                   &kp PLUS   AS(MINUS)  &trans   &trans   &trans     AS(GRAVE)  
-                                                                &trans  &trans &trans      &trans  &trans  &trans
+                                                                &trans  &trans &trans         &trans  &trans  &trans
                         >;
         };
 //Layer 2  Arrows Mouse __________________________________________________________________________________________________________________________________________ 
