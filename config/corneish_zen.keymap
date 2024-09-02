@@ -332,10 +332,10 @@ BCK        AS(A) AS(R) AS(S) AS(T) AS(D)                             AS(H) AS(N)
         arrows_layer {
             display-name = "Arrows";
             bindings = <
-&trans &kp EXCL &kp AT &kp HASH &kp DLLR  &kp C_VOL_UP                       &kp DEL      &kp LA(LEFT)  &kp UP   &kp LA(RIGHT)  &kp PG_UP  &kp LG(LS(RBKT))
-&trans &trans   &trans &trans   &trans    &kp C_VOL_DN                       &kp LG(UP)   &kp LEFT      &kp DOWN &kp RIGHT      &kp PG_DN  &kp LG(LA(SQT))  
+&trans &kp EXCL &kp AT &kp HASH &kp C_BRI_INC    &kp C_VOL_UP                       &kp DEL      &kp LA(LEFT)  &kp UP   &kp LA(RIGHT)  &kp PG_UP  &kp LG(LS(RBKT))
+&trans &trans   &trans &trans   &kp C_BRI_DEC    &kp C_VOL_DN                       &kp LG(UP)   &kp LEFT      &kp DOWN &kp RIGHT      &kp PG_DN  &kp LG(LA(SQT))  
 &trans &trans   &trans &trans   &trans    &trans                             &kp LG(DOWN) &kp LG(LEFT)  &kp LBRC &kp LG(RIGHT)  &kp HOME   &kp LA(LC(SPACE))
-                        &kp LGUI  &trans   &kp SPACE                &kp RET   &trans    &kp LALT
+                            &kp LGUI  &trans   &kp SPACE                &kp RET   &trans    &kp LALT
                         >;
                 };
 
