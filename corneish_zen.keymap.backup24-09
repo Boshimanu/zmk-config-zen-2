@@ -311,9 +311,9 @@
         default_layer {
             display-name = "Colemak";
             bindings = <
-AS(TAB)    &kp Q &kp W &kp F &kp P &kp G                             &kp J &kp L  &kp U     &kp Y   &kp SEMI  &kp BSLH
-BCK        &kp A &kp R &kp S &kp T &kp D                             &kp H &kp N  &kp E     &kp I   &kp O     &kp SQT
-&kp LSHFT  &kp Z &kp X &kp C &kp V &kp B                             &kp K &kp M  &kp COMMA &kp DOT &kp SLASH &kp RSHFT
+AS(TAB)    AS(Q) AS(W) AS(F) AS(P) AS(G)                             AS(J) AS(L)  AS(U)     AS(Y)   AS(SEMI)  AS(BSLH)
+BCK        AS(A) AS(R) AS(S) AS(T) AS(D)                             AS(H) AS(N)  AS(E)     AS(I)   AS(O)     AS(SQT)
+&kp LSHFT  AS(Z) AS(X) AS(C) AS(V) AS(B)                             AS(K) AS(M)  AS(COMMA) AS(DOT) AS(SLASH) &kp RSHFT
         &lt 5 LG(SPACE)  &lt 1 SPACE  &ht RCMD RET             &ht RCMD RET   &lt 2 SPACE  &mo 4
                         >;
                 };
@@ -322,10 +322,10 @@ BCK        &kp A &kp R &kp S &kp T &kp D                             &kp H &kp N
         numbers_layer {
             display-name = "Numbers";
             bindings = <
-&trans       &kp EXCL    &kp AT_SIGN  &kp POUND      &kp DOLLAR     &kp PERCENT                     &kp CARET  &kp AMPS   &kp STAR   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS   &kp CAPS
-&trans       &kp N1      &kp N2       &kp N3         &kp N4         &kp N5                          &kp N6     &kp N7     &kp N8     &kp N9                &kp N0                  AS(EQUAL)
-&trans       &trans      &kp LBKT     &kp LC(LEFT)   &kp LC(RIGHT)  &kp LA(LS(O))                   &kp PLUS   AS(MINUS)  AS(LBKT)   AS(RBKT)              AS(GRAVE)               &kp RIGHT_SHIFT  
-                                      &trans         &trans         &trans                          &trans     &trans     &trans
+&trans       AS(LBKT)    AS(RBKT)    &kp LPAR       &kp RPAR       &mk_capt                        &trans     &trans     &trans   &trans   &trans     &kp CAPS
+&trans       AS(N1)      AS(N2)      AS(N3)         AS(N4)         AS(N5)                          AS(N6)     AS(N7)     AS(N8)   AS(N9)   AS(N0)     AS(EQUAL)
+&trans       &trans      &kp LBKT    &kp LC(LEFT)   &kp LC(RIGHT)  &kp LA(LS(O))                   &kp PLUS   AS(MINUS)  &trans   &trans   &trans     AS(GRAVE)  
+                                                                &tranfs  &trans &trans         &trans  &trans  &trans
                         >;
         };
 //Layer 2  Arrows Mouse __________________________________________________________________________________________________________________________________________ 
@@ -334,7 +334,7 @@ BCK        &kp A &kp R &kp S &kp T &kp D                             &kp H &kp N
             bindings = <
 &trans &kp EXCL &kp AT &kp HASH &kp C_BRI_INC    &kp C_VOL_UP                       &kp DEL      &kp LA(LEFT)  &kp UP   &kp LA(RIGHT)  &kp PG_UP  &kp LG(LS(RBKT))
 &trans &trans   &trans &trans   &kp C_BRI_DEC    &kp C_VOL_DN                       &kp LG(UP)   &kp LEFT      &kp DOWN &kp RIGHT      &kp PG_DN  &kp LG(LA(SQT))  
-&trans &trans   &trans &trans   &trans           &tran                             &kp LG(DOWN) &kp LG(LEFT)  &kp LBRC &kp LG(RIGHT)  &kp HOME   &kp LA(LC(SPACE))
+&trans &trans   &trans &trans   &trans    &trans                             &kp LG(DOWN) &kp LG(LEFT)  &kp LBRC &kp LG(RIGHT)  &kp HOME   &kp LA(LC(SPACE))
                             &kp LGUI  &trans   &kp SPACE                &kp RET   &trans    &kp LALT
                         >;
                 };
