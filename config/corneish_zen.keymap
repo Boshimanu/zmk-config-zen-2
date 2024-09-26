@@ -341,9 +341,9 @@ BCK        &hm LCTRL A  &hm LALT R  &hm LSHFT S  &hm LGUI T &kp D               
         numbers_layer {
             display-name = "Numbers";
             bindings = <
-&trans       &kp EXCL      &kp AT_SIGN  &kp POUND      &kp DOLLAR     &kp PERCENT                     &kp CARET  &kp AMPS      &kp STAR      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS   &kp CAPS
-&trans       &hm LCTRL N1  &hm LALT N2  &hm LSHFT N3   &hm LGUI N4    &kp N5                          &kp N6     &hm LGUI N7   &hm LSHFT N8  &hm LALT N9           &hm LCTRL N0            AS(EQUAL)
-&trans       &kp LBKT      &kp RBKT     &kp LC(LEFT)   &kp LC(RIGHT)  &dt_ameth                       &kp PLUS   AS(MINUS)     &trans        &trans                &trans                  AS(GRAVE)
+&trans     &kp EXCL      &kp AT_SIGN  &kp POUND      &kp DOLLAR     &kp PERCENT                     &kp CARET  &kp AMPS      &kp STAR      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS   &kp CAPS
+&trans     &hm LCTRL N1  &hm LALT N2  &hm LSHFT N3   &hm LGUI N4    &kp N5                          &kp N6     &hm LGUI N7   &hm LSHFT N8  &hm LALT N9           &hm LCTRL N0            AS(EQUAL)
+&mk_capt   &kp LBKT      &kp RBKT     &kp LC(LEFT)   &kp LC(RIGHT)  &dt_ameth                       &kp PLUS   AS(MINUS)     &trans        &trans                &trans                  AS(GRAVE)
                                                 &kp LA(LS(B))      &trans      &trans          &trans     &trans     &trans
                         >;
         };
