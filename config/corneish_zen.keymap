@@ -134,12 +134,6 @@
         Default {
             display-name = "Colemak";
 
-            // --------------------------------------------------------------------------------
-            // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BSPC |
-            // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
-            // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
-            //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
-
             bindings = <
 &as LS(TAB) TAB                  &kp Q            &kp W               &kp F                 &kp P               &kp G        &kp J    &kp L                &kp I                  &kp O                &kp P            &kp BACKSLASH
 &ht_bck LA(BACKSPACE) BACKSPACE  &lhmrow LCTRL A  &lhmrow LEFT_ALT R  &lhmrow LEFT_SHIFT S  &lhmrow LEFT_GUI T  &kp D        &kp H    &rhmrow RIGHT_GUI N  &rhmrow RIGHT_SHIFT E  &rhmrow RIGHT_ALT I  &rhmrow RCTRL O  &kp SQT
@@ -168,13 +162,6 @@
 
         Bt_Sys {
             display-name = "BT_Sys";
-
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BSPC |
-            // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-            // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
-            //                    | GUI |     | SPC |   | ENT |     | ALT |
-
             bindings = <
 &kp TAB     &kp N1        &kp N2        &kp N3        &kp N4        &kp N5          &kp N6    &kp N7    &kp N8    &kp N9     &kp N0  &kp BSPC
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT  &trans  &trans
