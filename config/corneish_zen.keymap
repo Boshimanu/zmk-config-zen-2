@@ -148,7 +148,7 @@
 &as LS(TAB) TAB                  &kp Q            &kp W               &kp F                 &kp P               &kp G        &kp J    &kp L                &kp I                  &kp O                &kp P            &kp BACKSLASH
 &ht_bck LA(BACKSPACE) BACKSPACE  &lhmrow LCTRL A  &lhmrow LEFT_ALT R  &lhmrow LEFT_SHIFT S  &lhmrow LEFT_GUI T  &kp D        &kp H    &rhmrow RIGHT_GUI N  &rhmrow RIGHT_SHIFT E  &rhmrow RIGHT_ALT I  &rhmrow RCTRL O  &kp SQT
 &kp LSHFT                        &kp Z            &kp X               &kp C                 &kp V               &kp B        &kp K    &kp M                &kp COMMA              &kp DOT              &kp FSLH         &kp RIGHT_SHIFT
-                                                                      &lt 5 LG(SPACE)       &lt 0 SPACE         &kp ENTER    &kp RET  &lt 0 SPACE          &mo 4
+                                                                      &lt 5 LG(SPACE)       &lt 1 SPACE         &kp ENTER    &kp RET  &lt 2 SPACE          &mo 4
             >;
         };
 
