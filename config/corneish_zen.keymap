@@ -138,6 +138,141 @@
 
             tapping-term-ms = <165>;
         };
+
+        it_e: it_e {
+            compatible = "zmk,behavior-hold-tap";
+            label = "IT_E";
+            bindings = <&it_shift_egrav>, <&it_egrav>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <145>;
+            quick-tap-ms = <50>;
+            require-prior-idle-ms = <50>;
+            flavor = "balanced";
+        };
+    };
+
+    macros {
+        it_egrav: it_egrav {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(LG(LC(I))) &kp LEFT_BRACKET &kp LC(LA(LG(E)))>;
+            label = "IT_EGRAV";
+            wait-ms = <30>;
+            tap-ms = <0>;
+        };
+
+        it_shift_egrav: it_shift_egrav {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(LC(LG(I))) &kp LS(LEFT_BRACKET) &kp LA(LC(LG(E)))>;
+            label = "IT_SHIFT_EGRAV";
+        };
+
+        it_i: it_i {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(LC(LG(I))) &kp EQUAL &kp LA(LC(LG(E)))>;
+            label = "IT_I";
+        };
+
+        it_o: it_o {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(LC(LG(I))) &kp SEMICOLON &kp LA(LC(LG(E)))>;
+            label = "IT_O";
+        };
+
+        it_u: it_u {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(LC(LG(I))) &kp NON_US_BACKSLASH &kp LA(LC(LG(E)))>;
+            label = "IT_U";
+        };
+
+        it_a: it_a {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(LC(LG(I))) &kp SQT &kp LA(LC(LG(E)))>;
+            label = "IT_A";
+        };
+
+        efp: efp {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp UNDER &kp F &kp P>;
+            label = "EFP";
+        };
+
+        laugh: laugh {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp UNDER &kp L &kp A>;
+            label = "LAUGH";
+        };
+
+        eok: eok {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp UNDER &kp O &kp K>;
+            label = "EOK";
+        };
+
+        ethank: ethank {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp UNDER &kp T &kp H>;
+            label = "ETHANK";
+        };
+
+        esmile: esmile {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp UNDER &kp S &kp M>;
+            label = "ESMILE";
+        };
+
+        esad: esad {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp UNDER &kp S &kp A &kp D>;
+            label = "ESAD";
+        };
+
+        elove: elove {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp UNDER &kp L &kp V>;
+            label = "ELOVE";
+        };
+
+        ehmmm: ehmmm {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp UNDER &kp H &kp M>;
+            label = "EHMMM";
+        };
+
+        ecoffe: ecoffe {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp UNDER &kp C &kp F>;
+            label = "ECOFFE";
+        };
+
+        doublecmd: doublecmd {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_GUI &kp LEFT_GUI>;
+            label = "DOUBLECMD";
+        };
+
+        doublectrl: doublectrl {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LCTRL &kp LCTRL>;
+            label = "DOUBLECTRL";
+        };
     };
 
     keymap {
