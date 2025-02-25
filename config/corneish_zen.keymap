@@ -159,6 +159,8 @@
 &mk_capt  &trans        &trans      &trans         &trans        &trans           &trans         &trans        &trans        &trans        &trans        &trans
                                     &trans         &trans        &trans           &trans         &trans        &trans
             >;
+
+            label = "Numbers";
         };
 
         move {
@@ -168,6 +170,8 @@
 &trans  &trans  &trans          &trans          &trans           &trans       &trans  &kp LG(LEFT)  &trans    &kp LG(RIGHT)  &trans  &trans
                                 &trans          &mkp LCLK        &mkp RCLK    &trans  &trans        &trans
             >;
+
+            label = "Move";
         };
 
         Bt_Sys {
@@ -178,6 +182,8 @@
 &bootloader  &trans        &trans        &trans        &trans        &trans          &trans   &trans  &trans    &trans   &trans   &bootloader
                                          &kp LGUI      &trans        &kp SPACE       &kp RET  &trans  &kp RALT
             >;
+
+            label = "BT-SYS";
         };
 
         Italian {
@@ -187,6 +193,8 @@
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
                         &trans  &trans  &trans    &trans  &trans  &trans
             >;
+
+            label = "IT";
         };
 
         Emoji {
@@ -196,6 +204,8 @@
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
                         &trans  &trans  &trans    &trans  &trans  &trans
             >;
+
+            label = "Emoji";
         };
     };
 
@@ -203,8 +213,8 @@
         compatible = "zmk,conditional-layers";
 
         BT_Sys {
-            if-layers = <1>;
-            then-layer = <2>;
+            if-layers = <1 2>;
+            then-layer = <3>;
         };
     };
 };
