@@ -358,7 +358,7 @@
 &kp C_PREV  &kp C_PLAY_PAUSE  &kp C_NEXT  &kp C_MUTE  &kp K_VOLUME_DOWN     &kp K_VOLUME_UP         &trans      &trans      &it_u       &trans      &trans      &trans
 &trans      &it_a             &trans      &trans      &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC    &trans      &trans      &it_e 0 0   &it_i       &it_o       &trans
 &trans      &kp LG(N1)        &kp LG(N2)  &kp LG(N3)  &kp LG(N4)            &kp LG(N5)              &kp LG(N6)  &kp LG(N7)  &kp LG(N8)  &kp LG(N9)  &kp LG(N0)  &trans
-                                          &none       &trans                &trans                  &trans      &trans      &trans
+                                          &mo 5       &trans                &trans                  &trans      &trans      &trans
             >;
 
             label = "IT";
