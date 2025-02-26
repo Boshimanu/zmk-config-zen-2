@@ -65,6 +65,14 @@
             layers = <0 1>;
             require-prior-idle-ms = <50>;
         };
+
+        toLayerZero {
+            bindings = <&to 0>;
+            key-positions = <24 25>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <50>;
+            layers = <0 1 2 4 3>;
+        };
     };
 
     behaviors {
@@ -168,6 +176,15 @@
             label = "CAT_NAV_SH";
             #binding-cells = <0>;
             bindings = <&ht LEFT_SHIFT LS(LA(LG(SLASH)))>, <&to 2>;
+
+            tapping-term-ms = <165>;
+        };
+
+        cat_sh_hml: cat_sh_hml {
+            compatible = "zmk,behavior-tap-dance";
+            label = "CAT_SH_HML";
+            #binding-cells = <0>;
+            bindings = <&ht LEFT_SHIFT LS(LA(LG(SLASH)))>, <&to 0>;
 
             tapping-term-ms = <165>;
         };
@@ -340,10 +357,10 @@
         move {
             display-name = "Move";
             bindings = <
-&trans  &trans  &msc SCRL_DOWN  &mmv MOVE_UP    &msc SCRL_UP     &trans       &kp DELETE        &kp LA(LEFT)  &kp UP    &kp LA(RIGHT)  &trans      &kp PAGE_UP
-&trans  &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans       &kp LG(UP_ARROW)  &kp LEFT      &kp DOWN  &kp RIGHT      &kp INSERT  &kp PAGE_DOWN
-&to 0   &trans  &msc SCRL_LEFT  &trans          &msc SCRL_RIGHT  &trans       &kp LG(DOWN)      &kp LG(LEFT)  &trans    &kp LG(RIGHT)  &kp HOME    &kp END
-                                &trans          &mkp LCLK        &mkp RCLK    &trans            &trans        &trans
+&trans       &trans  &msc SCRL_DOWN  &mmv MOVE_UP    &msc SCRL_UP     &trans       &kp DELETE        &kp LA(LEFT)  &kp UP    &kp LA(RIGHT)  &trans      &kp PAGE_UP
+&trans       &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans       &kp LG(UP_ARROW)  &kp LEFT      &kp DOWN  &kp RIGHT      &kp INSERT  &kp PAGE_DOWN
+&cat_sh_hml  &trans  &msc SCRL_LEFT  &trans          &msc SCRL_RIGHT  &trans       &kp LG(DOWN)      &kp LG(LEFT)  &trans    &kp LG(RIGHT)  &kp HOME    &kp END
+                                     &trans          &mkp LCLK        &mkp RCLK    &trans            &trans        &trans
             >;
 
             label = "Move";
