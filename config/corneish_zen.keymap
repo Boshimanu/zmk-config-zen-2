@@ -292,10 +292,10 @@
         numbers {
             display-name = "Numbers";
             bindings = <
-&trans         &kp LS(EXCL)  &kp LS(AT)  &kp LS(POUND)  &kp LS(DLLR)  &kp LS(PRCNT)    &kp LS(CARET)  &kp LS(AMPS)  &kp LS(STAR)  &kp LS(LPAR)  &kp LS(RPAR)  &kp CAPSLOCK
-&kp BACKSPACE  &kp N1        &kp N2      &kp N3         &kp N4        &kp N5           &kp N6         &kp N7        &kp N8        &kp N9        &kp N0        &as PLUS EQUAL
-&mk_capt       &trans        &trans      &trans         &trans        &trans           &trans         &trans        &trans        &trans        &trans        &trans
-                                         &trans         &trans        &trans           &trans         &trans        &trans
+&trans         &kp LS(EXCL)                 &kp LS(AT)                     &kp LS(POUND)  &kp LS(DLLR)  &kp LS(PRCNT)    &kp LS(CARET)  &kp LS(AMPS)          &kp LS(STAR)  &kp LS(LPAR)  &kp LS(RPAR)  &kp CAPSLOCK
+&kp BACKSPACE  &kp N1                       &kp N2                         &kp N3         &kp N4        &kp N5           &kp N6         &kp N7                &kp N8        &kp N9        &kp N0        &as PLUS EQUAL
+&mk_capt       &ht LEFT_BRACE LEFT_BRACKET  &ht RIGHT_BRACE RIGHT_BRACKET  &trans         &trans        &trans           &trans         &ht UNDERSCORE MINUS  &trans        &trans        &trans        &trans
+                                                                           &trans         &trans        &trans           &trans         &trans                &trans
             >;
 
             label = "Numbers";
@@ -306,8 +306,8 @@
             bindings = <
 &trans  &trans  &msc SCRL_DOWN  &mmv MOVE_UP    &msc SCRL_UP     &trans       &trans  &kp LA(LEFT)  &kp UP    &kp LA(RIGHT)  &trans  &trans
 &trans  &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans       &trans  &kp LEFT      &kp DOWN  &kp RIGHT      &trans  &trans
-&trans  &trans  &trans          &trans          &trans           &trans       &trans  &kp LG(LEFT)  &trans    &kp LG(RIGHT)  &trans  &trans
-                                &trans          &mkp LCLK        &mkp RCLK    &trans  &trans        &trans
+&trans  &trans  &msc SCRL_LEFT  &trans          &msc SCRL_RIGHT  &trans       &trans  &kp LG(LEFT)  &trans    &kp LG(RIGHT)  &trans  &trans
+                                &mkp RCLK       &mkp MCLK        &mkp LCLK    &trans  &trans        &trans
             >;
 
             label = "Move";
