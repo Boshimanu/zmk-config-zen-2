@@ -179,6 +179,7 @@
             #binding-cells = <0>;
             bindings = <&kp LA(LC(LG(I))) &kp LS(LEFT_BRACKET) &kp LA(LC(LG(E)))>;
             label = "IT_SHIFT_EGRAV";
+            wait-ms = <30>;
         };
 
         it_i: it_i {
@@ -186,6 +187,7 @@
             #binding-cells = <0>;
             bindings = <&kp LA(LC(LG(I))) &kp EQUAL &kp LA(LC(LG(E)))>;
             label = "IT_I";
+            wait-ms = <30>;
         };
 
         it_o: it_o {
@@ -193,6 +195,7 @@
             #binding-cells = <0>;
             bindings = <&kp LA(LC(LG(I))) &kp SEMICOLON &kp LA(LC(LG(E)))>;
             label = "IT_O";
+            wait-ms = <30>;
         };
 
         it_u: it_u {
@@ -200,6 +203,7 @@
             #binding-cells = <0>;
             bindings = <&kp LA(LC(LG(I))) &kp NON_US_BACKSLASH &kp LA(LC(LG(E)))>;
             label = "IT_U";
+            wait-ms = <30>;
         };
 
         it_a: it_a {
@@ -207,6 +211,7 @@
             #binding-cells = <0>;
             bindings = <&kp LA(LC(LG(I))) &kp SQT &kp LA(LC(LG(E)))>;
             label = "IT_A";
+            wait-ms = <30>;
         };
 
         efp: efp {
@@ -214,6 +219,7 @@
             #binding-cells = <0>;
             bindings = <&kp UNDER &kp F &kp P>;
             label = "EFP";
+            wait-ms = <30>;
         };
 
         laugh: laugh {
@@ -221,6 +227,7 @@
             #binding-cells = <0>;
             bindings = <&kp UNDER &kp L &kp A>;
             label = "LAUGH";
+            wait-ms = <30>;
         };
 
         eok: eok {
@@ -228,6 +235,7 @@
             #binding-cells = <0>;
             bindings = <&kp UNDER &kp O &kp K>;
             label = "EOK";
+            wait-ms = <30>;
         };
 
         ethank: ethank {
@@ -235,6 +243,7 @@
             #binding-cells = <0>;
             bindings = <&kp UNDER &kp T &kp H>;
             label = "ETHANK";
+            wait-ms = <30>;
         };
 
         esmile: esmile {
@@ -242,6 +251,7 @@
             #binding-cells = <0>;
             bindings = <&kp UNDER &kp S &kp M>;
             label = "ESMILE";
+            wait-ms = <30>;
         };
 
         esad: esad {
@@ -249,6 +259,7 @@
             #binding-cells = <0>;
             bindings = <&kp UNDER &kp S &kp A &kp D>;
             label = "ESAD";
+            wait-ms = <30>;
         };
 
         elove: elove {
@@ -256,6 +267,7 @@
             #binding-cells = <0>;
             bindings = <&kp UNDER &kp L &kp V>;
             label = "ELOVE";
+            wait-ms = <30>;
         };
 
         ehmmm: ehmmm {
@@ -263,6 +275,7 @@
             #binding-cells = <0>;
             bindings = <&kp UNDER &kp H &kp M>;
             label = "EHMMM";
+            wait-ms = <30>;
         };
 
         ecoffe: ecoffe {
@@ -270,6 +283,7 @@
             #binding-cells = <0>;
             bindings = <&kp UNDER &kp C &kp F>;
             label = "ECOFFE";
+            wait-ms = <30>;
         };
 
         doublecmd: doublecmd {
@@ -277,6 +291,7 @@
             #binding-cells = <0>;
             bindings = <&kp LEFT_GUI &kp LEFT_GUI>;
             label = "DOUBLECMD";
+            wait-ms = <20>;
         };
 
         doublectrl: doublectrl {
@@ -284,6 +299,7 @@
             #binding-cells = <0>;
             bindings = <&kp LCTRL &kp LCTRL>;
             label = "DOUBLECTRL";
+            wait-ms = <20>;
         };
     };
 
@@ -339,10 +355,10 @@
         Italian {
             display-name = "IT";
             bindings = <
-&kp C_PREV  &kp C_PLAY_PAUSE  &kp C_NEXT  &kp C_MUTE  &kp K_VOLUME_DOWN     &kp K_VOLUME_UP         &trans  &trans  &it_u      &trans  &trans  &trans
-&trans      &it_a             &trans      &trans      &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC    &trans  &trans  &it_e 0 0  &it_i   &it_o   &trans
-&trans      &trans            &trans      &trans      &trans                &trans                  &trans  &trans  &trans     &trans  &trans  &trans
-                                          &trans      &trans                &trans                  &trans  &trans  &trans
+&kp C_PREV  &kp C_PLAY_PAUSE  &kp C_NEXT  &kp C_MUTE  &kp K_VOLUME_DOWN     &kp K_VOLUME_UP         &trans      &trans      &it_u       &trans      &trans      &trans
+&trans      &it_a             &trans      &trans      &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC    &trans      &trans      &it_e 0 0   &it_i       &it_o       &trans
+&trans      &kp LG(N1)        &kp LG(N2)  &kp LG(N3)  &kp LG(N4)            &kp LG(N5)              &kp LG(N6)  &kp LG(N7)  &kp LG(N8)  &kp LG(N9)  &kp LG(N0)  &trans
+                                          &trans      &trans                &trans                  &trans      &trans      &trans
             >;
 
             label = "IT";
@@ -351,10 +367,10 @@
         Emoji {
             display-name = "Emoji";
             bindings = <
-&trans  &trans  &elove   &efp    &ehmmm   &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &laugh  &esmile  &eok    &ethank  &esad     &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans   &trans  &trans   &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                         &trans  &trans   &trans    &trans  &trans  &trans
+&trans  &trans  &elove   &efp        &ehmmm       &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &laugh  &esmile  &eok        &ethank      &esad     &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans   &doublecmd  &doublectrl  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                         &trans      &trans       &trans    &trans  &trans  &trans
             >;
 
             label = "Emoji";
