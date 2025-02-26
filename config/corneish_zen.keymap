@@ -153,6 +153,15 @@
             require-prior-idle-ms = <50>;
             flavor = "balanced";
         };
+
+        dt_ameth: dt_ameth {
+            compatible = "zmk,behavior-tap-dance";
+            label = "DT_AMETH";
+            #binding-cells = <0>;
+            bindings = <&kp LA(LS(O))>, <&kp LA(LS(D))>, <&kp LS(LA(J))>;
+
+            tapping-term-ms = <165>;
+        };
     };
 
     macros {
@@ -294,10 +303,10 @@
         numbers {
             display-name = "Numbers";
             bindings = <
-&trans         &kp LS(EXCL)                 &kp LS(AT)                     &kp LS(POUND)          &kp LS(DLLR)         &kp LS(PRCNT)    &kp LS(CARET)  &kp LS(AMPS)          &kp LS(STAR)            &kp LS(LPAR)          &kp LS(RPAR)      &kp CAPSLOCK
-&kp BACKSPACE  &lhmrow LCTRL N1             &lhmrow LEFT_ALT N2            &lhmrow LEFT_SHIFT N3  &lhmrow LEFT_GUI N4  &kp N5           &kp N6         &rhmrow RIGHT_GUI N7  &rhmrow RIGHT_SHIFT N8  &rhmrow RIGHT_ALT N9  &rhmrow RCTRL N0  &as PLUS EQUAL
-&mk_capt       &ht LEFT_BRACE LEFT_BRACKET  &ht RIGHT_BRACE RIGHT_BRACKET  &trans                 &trans               &trans           &trans         &ht UNDERSCORE MINUS  &trans                  &trans                &trans            &trans
-                                                                           &trans                 &trans               &trans           &trans         &trans                &trans
+&trans         &kp LS(EXCL)                 &kp LS(AT)                     &kp LS(POUND)          &kp LS(DLLR)         &kp LS(PRCNT)    &kp LS(CARET)   &kp LS(AMPS)          &kp LS(STAR)            &kp LS(LPAR)          &kp LS(RPAR)      &kp CAPSLOCK
+&kp BACKSPACE  &lhmrow LCTRL N1             &lhmrow LEFT_ALT N2            &lhmrow LEFT_SHIFT N3  &lhmrow LEFT_GUI N4  &kp N5           &kp N6          &rhmrow RIGHT_GUI N7  &rhmrow RIGHT_SHIFT N8  &rhmrow RIGHT_ALT N9  &rhmrow RCTRL N0  &as PLUS EQUAL
+&mk_capt       &ht LEFT_BRACE LEFT_BRACKET  &ht RIGHT_BRACE RIGHT_BRACKET  &kp LC(LEFT_ARROW)     &kp LC(RIGHT)        &dt_ameth        &ht PLUS EQUAL  &ht UNDERSCORE MINUS  &trans                  &trans                &trans            &ht GRAVE TILDE
+                                                                           &kp LS(LA(B))          &trans               &trans           &trans          &trans                &trans
             >;
 
             label = "Numbers";
@@ -306,10 +315,10 @@
         move {
             display-name = "Move";
             bindings = <
-&trans  &trans  &msc SCRL_DOWN  &mmv MOVE_UP    &msc SCRL_UP     &trans       &kp DELETE  &kp LA(LEFT)  &kp UP    &kp LA(RIGHT)  &trans      &kp PAGE_UP
-&trans  &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans       &trans      &kp LEFT      &kp DOWN  &kp RIGHT      &kp INSERT  &kp LG(PAGE_DOWN)
-&trans  &trans  &msc SCRL_LEFT  &trans          &msc SCRL_RIGHT  &trans       &trans      &kp LG(LEFT)  &trans    &kp LG(RIGHT)  &kp HOME    &kp END
-                                &mkp RCLK       &trans           &mkp LCLK    &trans      &trans        &trans
+&trans  &trans  &msc SCRL_DOWN  &mmv MOVE_UP    &msc SCRL_UP     &trans       &kp DELETE        &kp LA(LEFT)  &kp UP    &kp LA(RIGHT)  &trans      &kp PAGE_UP
+&trans  &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans       &kp LG(UP_ARROW)  &kp LEFT      &kp DOWN  &kp RIGHT      &kp INSERT  &kp PAGE_DOWN
+&trans  &trans  &msc SCRL_LEFT  &trans          &msc SCRL_RIGHT  &trans       &kp LG(DOWN)      &kp LG(LEFT)  &trans    &kp LG(RIGHT)  &kp HOME    &kp END
+                                &trans          &mkp LCLK        &mkp RCLK    &trans            &trans        &trans
             >;
 
             label = "Move";
@@ -319,9 +328,9 @@
             display-name = "BT_Sys";
             bindings = <
 &kp F1       &kp F2           &kp F3           &kp F4           &kp F5           &kp F6             &kp F7           &kp F8           &kp F9           &kp F10          &kp F11          &kp F12
-&bt BT_CLR   &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4       &trans           &trans           &trans           &trans           &trans           &rgb_ug RGB_TOG
+&bt BT_CLR   &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4       &trans           &kp LEFT_GUI     &kp LEFT_SHIFT   &kp LEFT_ALT     &kp LCTRL        &rgb_ug RGB_TOG
 &bootloader  &rgb_ug RGB_EFR  &rgb_ug RGB_EFF  &rgb_ug RGB_BRD  &rgb_ug RGB_BRI  &rgb_ug RGB_SPD    &rgb_ug RGB_SPI  &rgb_ug RGB_SAD  &rgb_ug RGB_SAI  &rgb_ug RGB_HUD  &rgb_ug RGB_HUD  &bootloader
-                                               &sys_reset       &trans           &trans             &trans           &trans           &sys_reset
+                                               &trans           &trans           &sys_reset         &sys_reset       &trans           &trans
             >;
 
             label = "BT-SYS";
@@ -356,7 +365,7 @@
         compatible = "zmk,conditional-layers";
 
         BT_Sys {
-            if-layers = <1 2>;
+            if-layers = <4 5>;
             then-layer = <3>;
         };
     };
