@@ -342,7 +342,7 @@
             bindings = <
 &trans  &trans  &msc SCRL_DOWN  &mmv MOVE_UP    &msc SCRL_UP     &trans       &kp DELETE        &kp LA(LEFT)  &kp UP    &kp LA(RIGHT)  &trans      &kp PAGE_UP
 &trans  &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans       &kp LG(UP_ARROW)  &kp LEFT      &kp DOWN  &kp RIGHT      &kp INSERT  &kp PAGE_DOWN
-&trans  &trans  &msc SCRL_LEFT  &trans          &msc SCRL_RIGHT  &trans       &kp LG(DOWN)      &kp LG(LEFT)  &trans    &kp LG(RIGHT)  &kp HOME    &kp END
+&to 0   &trans  &msc SCRL_LEFT  &trans          &msc SCRL_RIGHT  &trans       &kp LG(DOWN)      &kp LG(LEFT)  &trans    &kp LG(RIGHT)  &kp HOME    &kp END
                                 &trans          &mkp LCLK        &mkp RCLK    &trans            &trans        &trans
             >;
 
