@@ -201,7 +201,7 @@
         it_u: it_u {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LA(LC(LG(I))) &kp NON_US_BACKSLASH &kp LA(LC(LG(E)))>;
+            bindings = <&kp LA(LC(LG(I))) &kp BACKSLASH &kp LA(LC(LG(E)))>;
             label = "IT_U";
             wait-ms = <30>;
         };
