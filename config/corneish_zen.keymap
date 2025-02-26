@@ -294,10 +294,10 @@
         numbers {
             display-name = "Numbers";
             bindings = <
-&trans         &kp LS(EXCL)                 &kp LS(AT)                     &kp LS(POUND)  &kp LS(DLLR)  &kp LS(PRCNT)    &kp LS(CARET)  &kp LS(AMPS)          &kp LS(STAR)  &kp LS(LPAR)  &kp LS(RPAR)  &kp CAPSLOCK
-&kp BACKSPACE  &kp N1                       &kp N2                         &kp N3         &kp N4        &kp N5           &kp N6         &kp N7                &kp N8        &kp N9        &kp N0        &as PLUS EQUAL
-&mk_capt       &ht LEFT_BRACE LEFT_BRACKET  &ht RIGHT_BRACE RIGHT_BRACKET  &trans         &trans        &trans           &trans         &ht UNDERSCORE MINUS  &trans        &trans        &trans        &trans
-                                                                           &trans         &trans        &trans           &trans         &trans                &trans
+&trans         &kp LS(EXCL)                 &kp LS(AT)                     &kp LS(POUND)          &kp LS(DLLR)         &kp LS(PRCNT)    &kp LS(CARET)  &kp LS(AMPS)          &kp LS(STAR)            &kp LS(LPAR)          &kp LS(RPAR)      &kp CAPSLOCK
+&kp BACKSPACE  &lhmrow LCTRL N1             &lhmrow LEFT_ALT N2            &lhmrow LEFT_SHIFT N3  &lhmrow LEFT_GUI N4  &kp N5           &kp N6         &rhmrow RIGHT_GUI N7  &rhmrow RIGHT_SHIFT N8  &rhmrow RIGHT_ALT N9  &rhmrow RCTRL N0  &as PLUS EQUAL
+&mk_capt       &ht LEFT_BRACE LEFT_BRACKET  &ht RIGHT_BRACE RIGHT_BRACKET  &trans                 &trans               &trans           &trans         &ht UNDERSCORE MINUS  &trans                  &trans                &trans            &trans
+                                                                           &trans                 &trans               &trans           &trans         &trans                &trans
             >;
 
             label = "Numbers";
@@ -321,7 +321,7 @@
 &kp F1       &kp F2           &kp F3           &kp F4           &kp F5           &kp F6             &kp F7           &kp F8           &kp F9           &kp F10          &kp F11          &kp F12
 &bt BT_CLR   &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4       &trans           &trans           &trans           &trans           &trans           &rgb_ug RGB_TOG
 &bootloader  &rgb_ug RGB_EFR  &rgb_ug RGB_EFF  &rgb_ug RGB_BRD  &rgb_ug RGB_BRI  &rgb_ug RGB_SPD    &rgb_ug RGB_SPI  &rgb_ug RGB_SAD  &rgb_ug RGB_SAI  &rgb_ug RGB_HUD  &rgb_ug RGB_HUD  &bootloader
-                                               &trans           &trans           &trans             &trans           &trans           &trans
+                                               &sys_reset       &trans           &trans             &trans           &trans           &sys_reset
             >;
 
             label = "BT-SYS";
