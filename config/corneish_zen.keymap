@@ -73,6 +73,22 @@
             require-prior-idle-ms = <50>;
             layers = <0 1 2 4 3>;
         };
+
+        cmd_shift_left {
+            bindings = <&kp LG(LEFT_SHIFT)>;
+            key-positions = <16 15>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <50>;
+            layers = <0>;
+        };
+
+        cmd_shift_right {
+            bindings = <&kp RG(RIGHT_SHIFT)>;
+            key-positions = <20 19>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <50>;
+            layers = <0>;
+        };
     };
 
     behaviors {
@@ -123,7 +139,7 @@
             quick-tap-ms = <30>;
             require-prior-idle-ms = <100>;
             flavor = "balanced";
-            hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 40 41 39 36 37 38>;
+            hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 40 41 39 36 37 38 28>;
         };
 
         rhmrow: rhmrow {
