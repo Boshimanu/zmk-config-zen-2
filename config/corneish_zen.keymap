@@ -361,10 +361,10 @@
         numbers {
             display-name = "Numbers";
             bindings = <
-&trans         &kp LS(EXCL)                 &kp LS(AT)                     &kp LS(POUND)          &kp LS(DLLR)         &kp LS(PRCNT)    &kp LS(CARET)   &kp LS(AMPS)          &kp LS(STAR)            &kp LS(LPAR)          &kp LS(RPAR)      &kp CAPSLOCK
-&kp BACKSPACE  &lhmrow LCTRL N1             &lhmrow LEFT_ALT N2            &lhmrow LEFT_SHIFT N3  &lhmrow LEFT_GUI N4  &kp N5           &kp N6          &rhmrow RIGHT_GUI N7  &rhmrow RIGHT_SHIFT N8  &rhmrow RIGHT_ALT N9  &rhmrow RCTRL N0  &as PLUS EQUAL
-&mk_capt       &ht LEFT_BRACE LEFT_BRACKET  &ht RIGHT_BRACE RIGHT_BRACKET  &kp LC(LEFT_ARROW)     &kp LC(RIGHT)        &dt_ameth        &ht PLUS EQUAL  &ht UNDERSCORE MINUS  &trans                  &trans                &trans            &ht GRAVE TILDE
-                                                                           &kp LS(LA(B))          &trans               &trans           &trans          &trans                &trans
+&trans         &kp LS(EXCL)                 &kp LS(AT)                     &kp LS(POUND)               &kp LS(DLLR)                 &kp LS(PRCNT)    &kp LS(CARET)   &kp LS(AMPS)          &kp LS(STAR)            &kp LS(LPAR)          &kp LS(RPAR)      &kp CAPSLOCK
+&kp BACKSPACE  &lhmrow LCTRL N1             &lhmrow LEFT_ALT N2            &lhmrow LEFT_SHIFT N3       &lhmrow LEFT_GUI N4          &kp N5           &kp N6          &rhmrow RIGHT_GUI N7  &rhmrow RIGHT_SHIFT N8  &rhmrow RIGHT_ALT N9  &rhmrow RCTRL N0  &as PLUS EQUAL
+&mk_capt       &ht LEFT_BRACE LEFT_BRACKET  &ht RIGHT_BRACE RIGHT_BRACKET  &ht LC(LA(LS(W))) LC(LEFT)  &ht LC(LA(LS(E))) LC(RIGHT)  &dt_ameth        &ht PLUS EQUAL  &ht UNDERSCORE MINUS  &trans                  &trans                &trans            &ht GRAVE TILDE
+                                                                           &kp LS(LA(B))               &trans                       &trans           &trans          &trans                &trans
             >;
 
             label = "Numbers";
