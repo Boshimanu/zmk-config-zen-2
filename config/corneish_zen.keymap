@@ -202,6 +202,20 @@
 
             tapping-term-ms = <220>;
         };
+
+        TD_Windows: TD_Windows {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_WINDOWS";
+            #binding-cells = <0>;
+            bindings = <&kp RIGHT_SHIFT>, <&to 6>;
+        };
+
+        TD_mac: TD_mac {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_MAC";
+            #binding-cells = <0>;
+            bindings = <&kp RIGHT_SHIFT>, <&to 0>;
+        };
     };
 
     macros {
@@ -351,7 +365,7 @@
             bindings = <
 &as LS(TAB) TAB                  &kp Q            &kp W               &kp F                 &kp P               &kp G             &kp J                &kp L                &kp U                  &kp Y                &kp SEMICOLON    &kp BACKSLASH
 &ht_bck LA(BACKSPACE) BACKSPACE  &lhmrow LCTRL A  &lhmrow LEFT_ALT R  &lhmrow LEFT_SHIFT S  &lhmrow LEFT_GUI T  &kp D             &kp H                &rhmrow RIGHT_GUI N  &rhmrow RIGHT_SHIFT E  &rhmrow RIGHT_ALT I  &rhmrow RCTRL O  &kp SQT
-&cat_nav_sh                      &kp Z            &kp X               &kp C                 &kp V               &kp B             &kp K                &kp M                &kp COMMA              &kp DOT              &kp FSLH         &kp RIGHT_SHIFT
+&cat_nav_sh                      &kp Z            &kp X               &kp C                 &kp V               &kp B             &kp K                &kp M                &kp COMMA              &kp DOT              &kp FSLH         &TD_Windows
                                                                       &lt 4 LG(SPACE)       &lt 1 SPACE         &ht LGUI ENTER    &ht RIGHT_GUI ENTER  &lt 2 SPACE          &mo 3
             >;
         };
@@ -414,6 +428,15 @@
             >;
 
             label = "BT-SYS";
+        };
+
+        Windows {
+            bindings = <
+&trans          &trans       &trans       &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans          &trans       &trans       &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&kp LEFT_SHIFT  &ht LC(Z) Z  &ht LC(X) X  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &TD_mac
+                                          &trans  &trans  &trans    &trans  &trans  &trans
+            >;
         };
     };
 
