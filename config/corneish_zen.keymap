@@ -465,6 +465,7 @@
         };
 
         Windows {
+            display-name = "WinOS";
             bindings = <
 &ht LS(TAB) TAB                  &kp Q               &ht LC(W) W         &ht LC(F) F           &kp P            &kp G              &kp J            &kp L            &kp U                      &kp Y                    &kp SEMI            &kp BSLH
 &ht_bck LC(BACKSPACE) BACKSPACE  &lhmrow LEFT_GUI A  &lhmrow LEFT_ALT R  &lhmrow LEFT_SHIFT S  &lhmrow LCTRL T  &kp D              &kp H            &rhmrow LCTRL N  &rhmrow RS(RIGHT_SHIFT) E  &rhmrow RIGHT_ALT I      &rhmrow RGUI O      &kp SQT
@@ -477,7 +478,7 @@
 
         WinNumbers {
             label = "WinNumbers";
-            display-name = "WinN";
+            display-name = "WinNumb";
             bindings = <
 &trans         &kp LS(EXCL)                 &kp LS(AT)                     &kp LS(POUND)          &kp LS(DLLR)           &kp LS(PRCNT)    &kp LS(CARET)  &kp LS(AMPS)          &kp LS(STAR)            &kp LS(LPAR)          &kp LS(RPAR)      &kp CAPSLOCK
 &kp BACKSPACE  &lhmrow LCMD N1              &lhmrow LEFT_ALT N2            &lhmrow LEFT_SHIFT N3  &lhmrow LCTRL N4       &kp N5           &kp N6         &rhmrow RIGHT_GUI N7  &rhmrow RIGHT_SHIFT N8  &rhmrow RIGHT_ALT N9  &rhmrow RCTRL N0  &as PLUS EQUAL
@@ -488,7 +489,7 @@
 
         MoveWin {
             label = "MoveWin";
-            display-name = "Move";
+            display-name = "MoveWin";
             bindings = <
 &trans       &trans  &msc SCRL_DOWN  &mmv MOVE_UP    &msc SCRL_UP     &trans       &kp DELETE        &kp LA(LEFT)  &kp UP    &kp LA(RIGHT)  &trans      &kp PAGE_UP
 &trans       &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &kp ENTER    &kp LC(UP_ARROW)  &kp LEFT      &kp DOWN  &kp RIGHT      &kp INSERT  &kp PAGE_DOWN
