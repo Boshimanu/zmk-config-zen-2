@@ -403,7 +403,7 @@
         };
 
         numbers {
-            display-name = "Numbers";
+            display-name = "NumbersMac";
             bindings = <
 &trans         &kp LS(EXCL)                 &kp LS(AT)                     &kp LS(POUND)               &kp LS(DLLR)                 &kp LS(PRCNT)    &kp LS(CARET)   &kp LS(AMPS)          &kp LS(STAR)            &kp LS(LPAR)          &kp LS(RPAR)      &kp CAPSLOCK
 &kp BACKSPACE  &lhmrow LCTRL N1             &lhmrow LEFT_ALT N2            &lhmrow LEFT_SHIFT N3       &lhmrow LEFT_GUI N4          &kp N5           &kp N6          &rhmrow RIGHT_GUI N7  &rhmrow RIGHT_SHIFT N8  &rhmrow RIGHT_ALT N9  &rhmrow RCTRL N0  &as PLUS EQUAL
@@ -468,6 +468,28 @@
 &ht_bck LC(BACKSPACE) BACKSPACE  &lhmrow LEFT_GUI A  &lhmrow LEFT_ALT R  &lhmrow LEFT_SHIFT S  &lhmrow LCTRL T  &kp D              &kp H            &rhmrow LCTRL N  &rhmrow RS(RIGHT_SHIFT) E  &rhmrow RIGHT_ALT I      &rhmrow RGUI O      &kp SQT
 &kp LEFT_SHIFT                   &ht LC(Z) Z         &ht LC(X) X         &ht LC(C) C           &ht LC(V) V      &kp B              &kp K            &kp M            &ht LESS_THAN COMMA        &ht GREATER_THAN PERIOD  &ht QUESTION SLASH  &TD_mac
                                                                          &ht LEFT_ALT ESCAPE   &lt 1 SPACE      &ht LCTRL ENTER    &ht RCTRL ENTER  &lt 2 SPACE      &ht RIGHT_ALT DEL
+            >;
+        };
+
+        WinNumbers {
+            label = "WinNumbers";
+            display-name = "WinN";
+            bindings = <
+&trans         &kp LS(EXCL)                 &kp LS(AT)                     &kp LS(POUND)          &kp LS(DLLR)           &kp LS(PRCNT)    &kp LS(CARET)  &kp LS(AMPS)          &kp LS(STAR)            &kp LS(LPAR)          &kp LS(RPAR)      &kp CAPSLOCK
+&kp BACKSPACE  &lhmrow LCMD N1              &lhmrow LEFT_ALT N2            &lhmrow LEFT_SHIFT N3  &lhmrow LCTRL N4       &kp N5           &kp N6         &rhmrow RIGHT_GUI N7  &rhmrow RIGHT_SHIFT N8  &rhmrow RIGHT_ALT N9  &rhmrow RCTRL N0  &as PLUS EQUAL
+&kp LSHFT      &ht LEFT_BRACE LEFT_BRACKET  &ht RIGHT_BRACE RIGHT_BRACKET  &kp LEFT_PARENTHESIS   &kp RIGHT_PARENTHESIS  &kp MINUS        &kp PLUS       &ht UNDERSCORE MINUS  &trans                  &trans                &trans            &ht GRAVE TILDE
+                                                                           &trans                 &trans                 &trans           &trans         &trans                &trans
+            >;
+        };
+
+        MoveWin {
+            label = "MoveWin";
+            display-name = "Move";
+            bindings = <
+&trans       &trans  &msc SCRL_DOWN  &mmv MOVE_UP    &msc SCRL_UP     &trans       &kp DELETE        &kp LA(LEFT)  &kp UP    &kp LA(RIGHT)  &trans      &kp PAGE_UP
+&trans       &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &kp ENTER    &kp LC(UP_ARROW)  &kp LEFT      &kp DOWN  &kp RIGHT      &kp INSERT  &kp PAGE_DOWN
+&cat_sh_hml  &trans  &msc SCRL_LEFT  &trans          &msc SCRL_RIGHT  &kp SPACE    &kp LC(DOWN)      &kp LC(LEFT)  &trans    &kp LC(RIGHT)  &kp HOME    &kp END
+                                     &trans          &mkp LCLK        &mkp RCLK    &trans            &trans        &trans
             >;
         };
     };
