@@ -470,7 +470,7 @@
 &ht LS(TAB) TAB                  &kp Q               &ht LC(W) W         &ht LC(F) F           &kp P            &kp G              &kp J            &kp L            &kp U                      &kp Y                    &kp SEMI            &kp BSLH
 &ht_bck LC(BACKSPACE) BACKSPACE  &lhmrow LEFT_GUI A  &lhmrow LEFT_ALT R  &lhmrow LEFT_SHIFT S  &lhmrow LCTRL T  &kp D              &kp H            &rhmrow LCTRL N  &rhmrow RS(RIGHT_SHIFT) E  &rhmrow RIGHT_ALT I      &rhmrow RGUI O      &kp SQT
 &kp LEFT_SHIFT                   &ht LC(Z) Z         &ht LC(X) X         &ht LC(C) C           &ht LC(V) V      &kp B              &kp K            &kp M            &ht LESS_THAN COMMA        &ht GREATER_THAN PERIOD  &ht QUESTION SLASH  &TD_mac
-                                                                         &ht LEFT_ALT ESCAPE   &lt 7 SPACE      &ht LCTRL ENTER    &ht RCTRL ENTER  &lt 8 SPACE      &ht LC(DELETE) DEL
+                                                                         &ht LEFT_ALT ESCAPE   &lt 7 SPACE      &ht LCTRL ENTER    &ht RCTRL ENTER  &lt 8 SPACE      &lt 3 LEFT_GUI
             >;
 
             label = "WinOS";
