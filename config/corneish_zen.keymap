@@ -432,10 +432,10 @@
 
         Windows {
             bindings = <
-&trans          &trans       &trans       &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans          &trans       &trans       &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&kp LEFT_SHIFT  &ht LC(Z) Z  &ht LC(X) X  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &TD_mac
-                                          &trans  &trans  &trans    &trans  &trans  &trans
+&trans                           &trans              &trans              &trans                &trans           &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&ht_bck LC(BACKSPACE) BACKSPACE  &lhmrow LEFT_GUI A  &lhmrow LEFT_ALT R  &lhmrow LEFT_SHIFT S  &lhmrow LCTRL T  &kp D     &trans  &trans  &trans  &trans  &trans  &trans
+&kp LEFT_SHIFT                   &ht LC(Z) Z         &ht LC(X) X         &ht LC(C) C           &ht LC(V) V      &trans    &trans  &trans  &trans  &trans  &trans  &TD_mac
+                                                                         &trans                &trans           &trans    &trans  &trans  &trans
             >;
         };
     };
